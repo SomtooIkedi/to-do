@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Tittle -->
+        <title>My to-do list</title>
+        
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- External Css -->
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- Font-awesome plugin-->
+        <link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="fontawesome/css/brands.css" rel="stylesheet">
+        <link href="fontawesome/css/solid.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- body of the app -->
+        <div class="application">
+            <h4 class="intro">My To do App</h4>
+            <!-- open modal button -->
+            <div id="Newtask" data-bs-toggle="modal" data-bs-target="#form">
+                <!-- This will be displayed on the button -->
+                <span>Add New Task</span>
+                <!-- font awesome icon -->
+                <i class="fa fa-plus"></i>
+            </div>
+            <!-- view created tasks -->
+            <h5 class="texts see_tasks">Tasks</h5>
+            <div id="tasks"></div>
+            <!-- bootstrap Modal form -->
+            <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Task Title</p>
+                            <input type="text" class="form-control" name="" id="textInput" />
+                            <div id="msg"></div>
+                            <br />
+                            <p>Due Date</p>
+                            <input type="date" class="form-control" name="" id="dateInput" />
+                            <br />
+                            <p>Description</p>
+                            <textarea
+                                name=""
+                                class="form-control"
+                                id="textarea"
+                                cols="30"
+                                rows="5"
+                            ></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="submit" id="add" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="jquery.min.js"></script>
+        <!-- Javascript plugins -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="javascripts.js"></script>
+    </body>
+</html>
